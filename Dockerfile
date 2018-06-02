@@ -1,4 +1,4 @@
-FROM cloudron/base:0.10.0
+FROM cloudron/base:0.11.0
 
 # setup nodejs version
 ENV NODEJS_VERSION 6.9.5
