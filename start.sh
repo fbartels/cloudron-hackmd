@@ -14,7 +14,6 @@ fi
 sleep 3
 
 export NODE_ENV='production'
-export HMD_ALLOW_ANONYMOUS="false"
 export HMD_DB_URL="$POSTGRESQL_URL"
 export HMD_LDAP_URL="$LDAP_URL"
 export HMD_LDAP_BINDDN="$LDAP_BIND_DN"
@@ -23,6 +22,11 @@ export HMD_LDAP_SEARCHBASE="$LDAP_USERS_BASE_DN"
 export HMD_LDAP_SEARCHFILTER="(username={{username}})"
 export HMD_LDAP_USERNAMEFIELD="username"
 export HMD_IMAGE_UPLOAD_TYPE=filesystem
+# access default permissions setting 
+export HMD_ALLOW_ANONYMOUS=false
+export HMD_ALLOW_ANONYMOUS_EDITS=true
+export HMD_ALLOW_FREEURL=false
+export HMD_DEFAULT_PERMISSION="limited"
 # the following two changes could be transferred to config.json to enable users to change this
 export HMD_EMAIL=false
 export HMD_ALLOW_EMAIL_REGISTER=false
